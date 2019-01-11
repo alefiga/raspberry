@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link href="https://fonts.googleapis.com/css?family=Aleo" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<nav class="desktop">
+    <ul>
+        <li><a href="index.html"> About</a></li>
+        <li><a href="index.html">Offer</a></li>
+        <li><img alt="raspberry icon" class="icon" src="img/icon.png"></li>
+        <li><a href="index.html">Gallery</a></li>
+        <li><a href="index.html">Contact</a></li>
+    </ul>
+</nav>
+<nav class="mobile">
+    <ul>
+        <li><a href="index.html"> About</a></li>
+        <li><a href="index.html">Offer</a></li>
+        <!--        <li><img class="icon" src="img/icon.png"></li>-->
+        <li><a href="index.html">Gallery</a></li>
+        <li><a href="index.html">Contact</a></li>
+    </ul>
+</nav>
+<i class="fa fa-bars ham"></i>
+<i class="fa fa-times close"></i>
+<main>
+    <h1>Raspberry kingdom</h1>
+    <div class="btn">
+        <button class="enter">
+            enter the gates
+        </button>
+    </div>
+</main>
+
+
+<div class="wrapper">
+    <div class="popup">
+        <h3>Are you a Raspberry Knight?</h3>
+        <form>
+            <input type="text" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="psw" required>
+
+        </form>
+        <div class="btn">
+            <button>
+                log in
+            </button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="left">&copy; 2014 Raspberry kingdom</div>
+    <div class="center">Cookies | Privacy</div>
+    <div class="right">Design by <strong>Wizard of Oz</strong></div>
+</footer>
+
+
+<script>
+    $('.ham').click(function () {
+        $('.mobile').slideDown();
+        $(this).css({"display": "none"});
+        $(".close").css({"display": "inline-block"});
+    });
+    $('.close').click(function () {
+        $('.mobile').slideUp();
+        $(this).css({"display": "none"});
+        $(".ham").css({"display": "inline-block"});
+    });
+    $('.enter').click(function () {
+        $('.wrapper').show();
+    });
+    /*hamburger*/
+
+    var wrapper = document.querySelector(".wrapper");
+    window.onclick = function (event) {
+        if (event.target == wrapper) {
+            wrapper.style.display = "none";
+        }
+    }
+
+    /*zamykanie okna poza obszarem*/
+
+</script>
+
+
+</body>
+</html>
